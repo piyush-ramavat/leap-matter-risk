@@ -2,7 +2,7 @@
 
 A simple NodeJs and ReactJS project to use AI for risk assessment.
 
-This project offers user to interact with AI via chat prompt and manage their records
+This project offers user to interact with AI via chat prompt and manage their results
 
 ## Getting Started
 

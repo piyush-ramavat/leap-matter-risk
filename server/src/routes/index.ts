@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { healthCheckHandler } from "./health-check";
-import { RestHelper } from "../lib/utils";
+import { RestHelper, withErrorHandler } from "../lib/utils";
+import { getResultHandler, saveResultHandler } from "./results";
 
 const apiRouter = Router();
 
@@ -8,6 +9,8 @@ const apiRouter = Router();
 apiRouter.get("/health-check", healthCheckHandler);
 
 // API routes
+apiRouter.post("/api/results", withErrorHandler(saveResultHandler));
+apiRouter.get("/api/results", withErrorHandler(getResultHandler));
 
 // Unknown
 apiRouter.use((req, res) => {
