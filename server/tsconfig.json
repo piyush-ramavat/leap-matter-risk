@@ -14,7 +14,8 @@
     "outDir": "dist",
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "types": ["node"]
   },
   "include": ["src/**/*", "types/jest.d.ts"],
   "files": ["node_modules/jest-expect-message/types/index.d.ts"]

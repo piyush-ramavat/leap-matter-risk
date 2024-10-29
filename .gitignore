@@ -131,3 +131,6 @@ dist
 
 # macOS
 .DS_Store
+
+# Keep environment variables out of version control
+.env
