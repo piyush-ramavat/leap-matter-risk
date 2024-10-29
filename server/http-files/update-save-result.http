@@ -1,0 +1,11 @@
+@base_url = {{$dotenv URL}}
+@port = {{$dotenv PORT}}
+
+# PUT {{base_url}}:{{port}}/api/results/:resultId
+
+PUT {{base_url}}:{{port}}/api/results/1
+Content-Type: application/json
+
+{
+    "text": "first result - Updated"
+}
