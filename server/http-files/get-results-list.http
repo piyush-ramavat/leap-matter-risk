@@ -1,0 +1,5 @@
+@base_url = {{$dotenv URL}}
+@port = {{$dotenv PORT}}
+
+# GET {{base_url}}:{{port}}/api/results/list
+GET {{base_url}}:{{port}}/api/results/list
