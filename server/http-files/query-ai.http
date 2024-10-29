@@ -1,0 +1,9 @@
+@base_url = {{$dotenv URL}}
+@port = {{$dotenv PORT}}
+
+POST {{base_url}}:{{port}}/api/query-ai
+Content-Type: application/json
+
+{
+    "text": "I am an accountant, and my client is asking for advice on strategies to optimise his tax structure. He and his partner have an income of $200,000 per year. They live in Sydney Australia and have no kids. please provide detailed list of strategies that could minimise their tax. Please be very specific and use concise language"
+}
