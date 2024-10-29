@@ -13,37 +13,47 @@ This is a mono repo containing code and scripts for both Backend and Frontend.
 - Postgres with database created for leap-matter-risk. (Required Schema and tables with seed data will be done by npm script)
 - NodeJs `v20.10.0` or higher
 - Npm `v10.2.3` or higher
-- Duplicate `.env.sample` and rename it to `.env`
+- Duplicate `sever/.env.sample` and rename it to `.env`
+- Duplicate `ui/.env.sample` and rename it to `.env`
 - Set the values for all ENV variables
 - then run following commands
 
 Install dependencies:
 
 ```bash
-npm install:all
+npm run install:all
 ```
 
-This will install all the dependencies required to run Backend as well as Frontend
-
-Create database schema, tables and seed the data:
+To run backend in dev mode
 
 ```bash
-npm run db:setup
+cd server
+npm run dev
 ```
 
-To run:
+For production build of backend:
 
 ```bash
-npm dev
+npm run build:backend
+npm run start:backend
 ```
 
-This will start a tsc compiler and dev server.
-
-For production build:
+To run frontend in development mode:
 
 ```bash
-npm build
-npm start
+npm run start:frontend
+```
+
+For production build of backend:
+
+```bash
+npm run build:frontend
+```
+
+For clean install
+
+```bash
+npm run clean:install:all
 ```
 
 Please refer to respective `package.json` files for backend and frontend scripts and run commands.
