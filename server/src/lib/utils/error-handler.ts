@@ -1,8 +1,3 @@
-import {
-  PrismaClientKnownRequestError,
-  PrismaClientUnknownRequestError,
-  PrismaClientValidationError,
-} from "@prisma/client/runtime/library";
 import { ErrorRequestHandler, RequestHandler } from "express";
 export const withErrorHandler = (handler: RequestHandler): RequestHandler => {
   return async (request, response, next) => {
@@ -19,12 +14,6 @@ export const APIErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   if (res.headersSent) return next(err);
 
   console.error("Error", process.env.NODE_ENV === "development" ? err : err.message);
-  if (
-    err instanceof PrismaClientKnownRequestError ||
-    err instanceof PrismaClientUnknownRequestError ||
-    err instanceof PrismaClientValidationError
-  ) {
-    err.message = "Failed to perform the operation";
-  }
+
   res.status(err.status || 500).send(err.message || "Unknown Error");
 };

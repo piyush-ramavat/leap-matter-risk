@@ -1,9 +1,0 @@
-@base_url = {{$dotenv URL}}
-@port = {{$dotenv PORT}}
-
-POST {{base_url}}:{{port}}/api/results
-Content-Type: application/json
-
-{
-    "text": "first result"
-}
