@@ -7,6 +7,7 @@
     "format": "prettier --write \"./src/**/*.ts\"",
     "tsc": "tsc -p . --watch",
     "build": "rm -rf dist && tsc -p .",
+    "build:prod": "rm -rf public && npm run --prefix ../ui build && npm run build",
     "build:debug": "nodemon ./dist/index.js --inspect",
     "start": "node --max-old-space-size=192 ./dist/index.js",
     "dev": "concurrently \"npm run tsc\" \"npm run dev:server\"",
