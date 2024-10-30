@@ -6,10 +6,7 @@ This project offers user to interact with AI via chat prompt and manage their re
 
 ## Demo
 
-
-https://github.com/user-attachments/assets/2735c687-8d21-4325-9321-d55554bf84c5
-
-Or use this link: https://drive.google.com/file/d/1zsNDUzW7ScKnllcIrQ_7yOvxeFV_oha8/view?usp=sharing
+https://drive.google.com/file/d/1zsNDUzW7ScKnllcIrQ_7yOvxeFV_oha8/view?usp=sharing
 
 ## Getting Started
 
